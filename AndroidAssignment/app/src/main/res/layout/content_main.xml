@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.rayala.androidassignment.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@color/colorAccent">
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:text="Click on me and you will get a DIALOG"
+        android:id="@+id/dBtn"
+        android:onClick="open"
+        android:textSize="@dimen/fab_margin"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/sjsuImageLogo"
+        android:layout_alignStart="@+id/sjsuImageLogo" />
+
+    <ImageView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:id="@+id/sjsuImageLogo"
+        android:src="@drawable/logo"
+
+        android:layout_below="@+id/actAText"
+        android:layout_alignLeft="@+id/actAText"
+        android:layout_alignStart="@+id/actAText"
+        android:layout_alignRight="@+id/actAText"
+        android:layout_alignEnd="@+id/actAText" />
+
+    <TextView
+        android:id="@+id/actAText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Activity A"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="70px"
+        android:textColor="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click to start Activity B"
+        android:id="@+id/actBtnB"
+        android:onClick="gotoB"
+        android:textSize="@dimen/fab_margin"
+        android:layout_below="@+id/sjsuImageLogo"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Thread Counter:"
+        android:id="@+id/textView2"
+        android:textColor="#FFFF99"
+        android:textSize="60px"
+        android:layout_alignTop="@+id/threadVal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/counterVal"
+        android:id="@+id/threadVal"
+        android:textColor="#FFFF99"
+        android:textSize="70px"
+        android:layout_above="@+id/exitBtn"
+        android:layout_toEndOf="@+id/dBtn"
+        android:layout_toRightOf="@+id/dBtn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:id="@+id/exitBtn"
+        android:onClick="exitApp"
+        android:textSize="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp" />
+</RelativeLayout>
